@@ -17,7 +17,7 @@ public class AppDeliveryApplication {
 	}
 	@GetMapping("/hello")
 	public String hello(@RequestParam(value="name", defaultValue = "world") String name){
-		if(name.equals("Larissa"))
+		if(name.toLowerCase().equals("Larissa"))
 		return "Você de novo";
 		else		
 		return "Hello "+ name;
